@@ -1,0 +1,14 @@
+<input type="text " #uname [(ngModel)]="uuname">
+<button (click)="getvalu(uname)">click me</button>
+<button (click)="getvalureplace()">replace</button>
+
+<table border="1">
+  <tr>
+    <th>user</th>
+    <th>remove</th>
+  </tr>
+  <tr *ngFor = "let users of user; index as i">
+    <td>{{users.name}}</td>
+    <td><button (click)="onRemoveuser(i)">remove</button></td>
+  </tr>
+</table>
