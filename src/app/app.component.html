@@ -1,14 +1,22 @@
-<div class="contaner">
-  <button  (click)="goer()">structural directives</button>
-  <br>
-  <p *ngIf="property; then thenblock else elseblock">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempore nostrum illo.</p>
-  <br>
-  <br>
-  <br>
-  <ng-template #thenblock> 
-    <div>then black has been created yet.</div>
-  </ng-template>
-  <ng-template #elseblock> 
-    <div>else black has been created yet.</div>
-  </ng-template>
+<div class="container">
+  <div class="col-md-4">
+    <select name="" id="" class="form-control" (click)="getvalu($event)">
+      <option value="Select product" >Select product</option>
+      <option value="laptap" >laptap</option>
+      <option value="mobile" >mobile</option>
+      <option value="tv">tv</option>
+      <option value="washing machine" >washing machine</option>
+    </select>
+  </div>
+  <div class="col-md-12" [ngSwitch]="Selectproduct">
+    <h2 class="text-success" *ngSwitchCase="'laptap'">laptap</h2>
+    <h2 class="text-success" *ngSwitchDefault>plise Select product</h2>
+    <h2 class="text-success" *ngSwitchDefault>plise Select </h2>
+    <h2 class="text-success"*ngSwitchCase="'mobile'">mobile</h2>
+    <h2 class="text-success"*ngSwitchCase="'tv'">tv</h2>
+    <h2 class="text-success"*ngSwitchCase="'washing machine'">washing machine</h2>
+  </div>
 </div>
+
+
+
