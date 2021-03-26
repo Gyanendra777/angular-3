@@ -5,10 +5,15 @@
 <table border="1">
   <tr>
     <th>user</th>
-    <th>remove</th>
+    <th>button remove</th>
   </tr>
   <tr *ngFor = "let users of user; index as i">
     <td>{{users.name}}</td>
     <td><button (click)="onRemoveuser(i)">remove</button></td>
   </tr>
 </table>
+<hr><hr>
+<app-push></app-push>
+
+<hr><hr>
+<app-splice></app-splice>
