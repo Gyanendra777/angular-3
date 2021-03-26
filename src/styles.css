@@ -7,7 +7,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       -ms-flex: 1 1 0%;
           flex: 1 1 0%;
   box-sizing: border-box;
-  background-color: aqua;
+  background-color: rgb(171, 196, 221);
   
 }
 .flex ul{
