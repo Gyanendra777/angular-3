@@ -7,11 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'text4';
-  vale="";
-  tesee="";
-  templet(){
-    
-    this.vale =   this.tesee
-    
+  property:boolean =true;
+
+  goer(){
+    this.property=false;
   }
 }
