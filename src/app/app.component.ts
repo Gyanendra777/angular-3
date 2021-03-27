@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'text4';
-valu="";
-  templet(my){
-    this.valu = my.name
-    console.log(my.value);
+  vale="";
+  tesee="";
+  templet(){
+    
+    this.vale =   this.tesee
+    
   }
 }
