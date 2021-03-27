@@ -1,3 +1,71 @@
-<input type="text" name="hello" value="templet referance" #tesee>
-<button (click)="templet(tesee)">click me</button>
-<h1>{{valu}}</h1>
+Angular 10|9|8 Nested Routing with Multiple RouterOutlet using loadChildren having own Router Modules Example Application
+Last updated on July 30, 2020 Jolly.Exe
+Primis Player Placeholder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ ng update @angular/cli @angular/coreCopy
+
+# Create new application
+$ ng new AngularNestedRouting
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+
+# Navigate to app directory
+$ cd AngularNestedRouting
+
+# Open in Visual Studio Code
+$ code .Copy
+
+
+$ ng g c attendance --skipTests=true
+$ ng g c dashboard --skipTests=true
+$ ng g c leaves --skipTests=true
+$ ng g c page404 --skipTests=true
+$ ng g c profile --skipTests=trueCopy
+
+$ ng g c leaves/apply --skipTests=true
+$ ng g c leaves/balance --skipTests=true
+$ ng g c leaves/page404leaves --skipTests=trueCopy
+
+$ ng g c leaves/balance/casual --skipTests=true
+$ ng g c leaves/balance/earned --skipTests=true
+$ ng g c leaves/balance/page404balance --skipTests=trueCopy
+
+
+
+
+
+<ul>
+  <li>
+    <a [routerLink]="'/'" routerLinkActive="active"> Dashboard </a>
+  </li>
+  <li>
+    <a [routerLink]="'/profile'" routerLinkActive="active"> My Profile </a>
+  </li>
+  <li>
+    <a [routerLink]="'/attendance'" routerLinkActive="active"> My Attendance </a>
+  </li>
+  <li>
+    <a [routerLink]="'/leaves'" routerLinkActive="active"> My leaves </a>
+  </li>
+</ul>
+
+  <router-outlet></router-outlet>
