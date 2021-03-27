@@ -1,3 +1,19 @@
-<input type="text" name="hello" value="templet referance" #tesee>
-<button (click)="templet(tesee)">click me</button>
-<h1>{{valu}}</h1>
+<input type="text " #uname [(ngModel)]="uuname">
+<button (click)="getvalu(uname)">click me</button>
+<button (click)="getvalureplace()">replace</button>
+
+<table border="1">
+  <tr>
+    <th>user</th>
+    <th>button remove</th>
+  </tr>
+  <tr *ngFor = "let users of user; index as i">
+    <td>{{users.name}}</td>
+    <td><button (click)="onRemoveuser(i)">remove</button></td>
+  </tr>
+</table>
+<hr><hr>
+<app-push></app-push>
+
+<hr><hr>
+<app-splice></app-splice>

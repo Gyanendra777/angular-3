@@ -1,0 +1,15 @@
+<input type="text" #uname [(ngModel)]="uuname" >
+<button (click)="gater(uname)">click me</button>
+
+<table border="1">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>button remove</th>
+  </tr>
+  <tr *ngFor="let users of user; index as i">
+    <td>{{i+1}}</td>
+    <td>{{users.name}}</td>
+    <td><button (click)="getRemove(i)">remove</button></td>
+  </tr>
+</table>
