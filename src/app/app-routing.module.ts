@@ -6,19 +6,18 @@ import { RamComponent } from './projuct/computer/ram/ram.component';
 const routes: Routes = [
 
   {
-    
-    path: 'product',component: ProjuctComponent, children: [
+    path: 'product', component: ProjuctComponent, children: [
       // {path: '',component: ProjuctComponent},
       {
-        path: ':id',component: ComputerComponent, children: [
+        path: ':id', component: ComputerComponent, children: [
           // { path: '', component: ComputerComponent },
           { path: ':id', component: RamComponent }
         ]
-      }]
+      }
+    ]
   },
   // { path: 'product/:id', component: ComputerComponent},
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
