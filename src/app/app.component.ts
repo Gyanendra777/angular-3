@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'text4';
+  constructor(){
+    console.log('hello worde')
+  }
 
 }
