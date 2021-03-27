@@ -7,11 +7,11 @@ const routes: Routes = [
 
   {
     
-    path: 'product', children: [
-      {path: '',component: ProjuctComponent},
+    path: 'product',component: ProjuctComponent, children: [
+      // {path: '',component: ProjuctComponent},
       {
-        path: ':id', children: [
-          { path: '', component: ComputerComponent },
+        path: ':id',component: ComputerComponent, children: [
+          // { path: '', component: ComputerComponent },
           { path: ':id', component: RamComponent }
         ]
       }]
