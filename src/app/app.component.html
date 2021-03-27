@@ -1,3 +1,26 @@
-<input type="text" name="hello" value="templet referance" #tesee>
-<button (click)="templet(tesee)">click me</button>
-<h1>{{valu}}</h1>
+<div>
+
+  <div class="ng-scope layout-row">
+
+    <div class="flex">
+      <ul>
+        <li><a  routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a  routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a  routerLink="/product" routerLinkActive="active">Contant</a></li>
+        <li><a  routerLink="/contant" routerLinkActive="active">Product</a></li>
+        <li><a  routerLink="/contan" routerLinkActive="active">pagenotfount works!</a></li>
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="ng-scope layout-column">
+
+    <div class="flex-33">
+      <router-outlet></router-outlet>
+    </div>
+   
+
+  </div>
+
+</div>

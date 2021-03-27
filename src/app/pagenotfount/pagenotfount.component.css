@@ -1,0 +1,8 @@
+article {
+  
+  padding: 20px;
+  width: 100%;
+  color: black;
+  background-color: #fd0000;
+  height: 300px; /* only for demonstration, should be removed */
+}
