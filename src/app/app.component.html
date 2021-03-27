@@ -1,3 +1,14 @@
-<input type="text" name="hello" value="templet referance" #tesee>
-<button (click)="templet(tesee)">click me</button>
-<h1>{{valu}}</h1>
+<div class="contaner">
+  <button  (click)="goer()">structural directives</button>
+  <br>
+  <p *ngIf="property; then thenblock else elseblock">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempore nostrum illo.</p>
+  <br>
+  <br>
+  <br>
+  <ng-template #thenblock> 
+    <div>then black has been created yet.</div>
+  </ng-template>
+  <ng-template #elseblock> 
+    <div>else black has been created yet.</div>
+  </ng-template>
+</div>
