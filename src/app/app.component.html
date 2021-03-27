@@ -1,3 +1,14 @@
-<input type="text" name="hello" value="templet referance" #tesee>
-<button (click)="templet(tesee)">click me</button>
-<h1>{{valu}}</h1>
+<table border="1">
+  <tr>
+    <th>..</th>
+    <th>id</th>
+    <th>name</th>
+    <th>place</th>
+  </tr>
+  <tr *ngFor = "let ves of emailid; index as i">
+    <td>{{i+1}}</td>
+    <td>{{ves.id}}</td>
+    <td>{{ves.name}}</td>
+    <td>{{ves.place}}</td>
+  </tr>
+</table>
