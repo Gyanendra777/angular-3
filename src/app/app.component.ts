@@ -7,9 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'text4';
-valu="";
-  templet(my){
-    this.valu = my.name
-    console.log(my.value);
+
+  Selectproduct:string;
+  
+  getvalu(drapd){
+    console.log(drapd.target.value);
+    this.Selectproduct=drapd.target.value;
   }
+
 }

@@ -1,3 +1,22 @@
-<input type="text" name="hello" value="templet referance" #tesee>
-<button (click)="templet(tesee)">click me</button>
-<h1>{{valu}}</h1>
+<div class="container">
+  <div class="col-md-4">
+    <select name="" id="" class="form-control" (click)="getvalu($event)">
+      <option value="Select product" >Select product</option>
+      <option value="laptap" >laptap</option>
+      <option value="mobile" >mobile</option>
+      <option value="tv">tv</option>
+      <option value="washing machine" >washing machine</option>
+    </select>
+  </div>
+  <div class="col-md-12" [ngSwitch]="Selectproduct">
+    <h2 class="text-success" *ngSwitchCase="'laptap'">laptap</h2>
+    <h2 class="text-success" *ngSwitchDefault>plise Select product</h2>
+    <h2 class="text-success" *ngSwitchDefault>plise Select </h2>
+    <h2 class="text-success"*ngSwitchCase="'mobile'">mobile</h2>
+    <h2 class="text-success"*ngSwitchCase="'tv'">tv</h2>
+    <h2 class="text-success"*ngSwitchCase="'washing machine'">washing machine</h2>
+  </div>
+</div>
+
+
+
