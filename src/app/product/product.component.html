@@ -1,8 +1,17 @@
 
-<div class="flex">
-  <ul>
-    <li><a routerLink="/product/laptop" routerLinkActive="active">laptop</a></li>
-  </ul>
+<div>
+  <div class="ng-scope layout-row">
+    <div class="flex">
+      <ul>
+        <li><a routerLink="/product/laptop" routerLinkActive="active">laptop</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ng-scope layout-column">
+    <div class="flex-33">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
 
 

@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contant', component: ContantComponent },
-  { path: 'product', children:[
-    { path: '', component: ProductComponent},
+  { path: 'product',component: ProductComponent, children:[
+    // { path: '', component: ProductComponent},
     { path: 'laptop', component: LeptapComponent }
   ]},
 ];
