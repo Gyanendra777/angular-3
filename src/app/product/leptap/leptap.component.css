@@ -1,0 +1,7 @@
+article {
+  
+  padding: 20px;
+  width: 100%;
+  background-color: #ca9797;
+  height: 300px; /* only for demonstration, should be removed */
+}
