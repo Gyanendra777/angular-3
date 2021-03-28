@@ -13,6 +13,9 @@ import { ProductComponent } from './product/product.component';
 import { LeptapComponent } from './product/leptap/leptap.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { MobileComponent } from './product/mobile/mobile.component';
+import { RameComponent } from './product/rame/rame.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import {MatButtonModule} from '@angular/material/button';
     ContantComponent,
     ProductComponent,
     LeptapComponent,
+    TabletComponent,
+    MobileComponent,
+    RameComponent,
   ],
   imports: [
     MatCardModule,
