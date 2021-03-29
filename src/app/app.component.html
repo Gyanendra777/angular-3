@@ -1,22 +1,8 @@
-<div>
-  <div class="ng-scope layout-row">
-    <div class="flex">
-      <ul>
-        <li><a  routerLink="" routerLinkActive="active">Home</a></li>
-        <li><a  routerLink="about" routerLinkActive="active">About</a></li>
-        <li><a  routerLink="contant" routerLinkActive="active">Contant</a></li>
-        <li><a  routerLink="product" routerLinkActive="active">Product</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="ng-scope layout-column">
-    <div class="flex-33">
-      <input type="text " #val>
-      <button (click)="getvalue(val)">click</button>
-        <app-home *ngIf="comp1Exist" [hous]="home">ux dme{{home}}</app-home>
-        <button (click)="destroy()">clicke me</button>
-    </div>
-  </div>
-</div>
+<app-home></app-home>
 
-
+<form #simpleForm="ngForm"(ngSubmit)="getUserValue(simpleForm.value)">
+  <input type="text" ngModel name="username" placeholder="username"><br><br>
+  <input type="text" ngModel name="age" placeholder="age"><br><br>
+  <input type="text" ngModel name="address" placeholder="address"><br><br>
+  <button>submite</button>
+</form>

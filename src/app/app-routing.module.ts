@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
 
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

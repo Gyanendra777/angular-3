@@ -7,15 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  home:string;
-  comp1Exist:boolean=true;
+ 
 constructor(){}
 
-getvalue(val){
-    this.home = val.value
-}
-destroy(){
-  this.comp1Exist = false;
+
+getUserValue(val){
+  
+  console.log(val)
 }
 
 
