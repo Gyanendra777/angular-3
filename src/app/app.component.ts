@@ -16,9 +16,9 @@ constructor(){}
 
 
 getUserValue(val:any){
-  this.username = val.username;
-  this.age = val.age;
-  this.address = val.address;
+  this.username = val.name.username;
+  this.age = val.age.age;
+  this.address = val.age.address;
   console.log(this.age)
 }
 
