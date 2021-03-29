@@ -7,13 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+
+  address
+  username
+  age
+
 constructor(){}
 
 
-getUserValue(val){
-  
-  console.log(val)
+getUserValue(val:any){
+  this.username = val.username;
+  this.age = val.age;
+  this.address = val.address;
+  console.log(this.age)
 }
 
 
