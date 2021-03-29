@@ -11,7 +11,10 @@
   </div>
   <div class="ng-scope layout-column">
     <div class="flex-33">
-      <router-outlet></router-outlet>
+      <input type="text " #val>
+      <button (click)="getvalue(val)">click</button>
+        <app-home *ngIf="comp1Exist" [hous]="home">ux dme{{home}}</app-home>
+        <button (click)="destroy()">clicke me</button>
     </div>
   </div>
 </div>

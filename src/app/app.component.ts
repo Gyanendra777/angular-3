@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'text4';
-constructor(private route: ActivatedRoute,){}
+  home:string;
+  comp1Exist:boolean=true;
+constructor(){}
+
+getvalue(val){
+    this.home = val.value
+}
+destroy(){
+  this.comp1Exist = false;
+}
+
+
+
 }
