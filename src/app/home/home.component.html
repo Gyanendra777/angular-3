@@ -18,7 +18,31 @@
   <input type="email" name="email" ngModel email required #email="ngModel"><br>
   <label *ngIf="!email.valid && email.touched">please Enter valid Email</label>
   <br><br>
+  <div class="custom-control custom-radio" *ngFor="let m of genders">
+    <input type="radio" id="{{m.id}}" name="gender" class="custom-control-input" [ngModel]="defoultvaluee" value="{{m.gender}}">
+    <label class="custom-control-label" for="{{m.id}}">{{m.gender}}</label>
+  </div>
   <br>
   <br>
   <button [disabled]="!simpleform.valid">submite</button>
+  <button (click)="setva()">setvalue</button>
+  <button (click)="pachva()">pachvalue</button>
 </form>
+<div>
+  <table border="1">
+    <tr>
+      <th>Enter fast name</th>
+      <th>Enter last name</th>
+      <th>Enter address</th>
+      <th>Enter email</th>
+      <th>gender</th>
+    </tr>
+    <tr>
+      <td>{{uaered.fast}}</td>
+      <td>{{uaered.last}}</td>
+      <td>{{uaered.address}}</td>
+      <td>{{uaered.email}}</td>
+      <td>{{uaered.gender}}</td>
+    </tr>
+  </table>
+</div>
