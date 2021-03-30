@@ -1,48 +1,28 @@
-<form #simpleform="ngForm" (ngSubmit)="valusend(simpleform.value)">
-  <div ngModelGroup="userditel" #userditel="ngModelGroup">
-    <label for="">Enter fast name*</label><br>
-    <input type="text" name="fast" [(ngModel)]="usernamee" ngModel required #fast="ngModel"><br>
-    <label *ngIf="!fast.valid && fast.touched">please Enter Enter fast name</label>
-    <br><br>
-    <label for="">Enter last name</label><br>
-    <input type="text" name="last" ngModel required #last="ngModel"><br>
-    <label *ngIf="!last.valid && last.touched">please Enter valid last name</label>
-    <br>
-  </div>
-   <strong *ngIf="!userditel.valid && userditel.touched">userditel in valid input ngModelGroup</strong><br><br><br>
-  <label for="">Enter address </label><br>
-  <input type="text" name="address" ngModel required #address="ngModel"><br>
-  <label *ngIf="!address.valid && address.touched">please Enter valid address</label>
-  <br><br>
-  <label for="">Enter email </label><br>
-  <input type="email" name="email" ngModel email required #email="ngModel"><br>
-  <label *ngIf="!email.valid && email.touched">please Enter valid Email</label>
-  <br><br>
-  <div class="custom-control custom-radio" *ngFor="let m of genders">
-    <input type="radio" id="{{m.id}}" name="gender" class="custom-control-input" [ngModel]="defoultvaluee" value="{{m.gender}}">
-    <label class="custom-control-label" for="{{m.id}}">{{m.gender}}</label>
-  </div>
-  <br>
-  <br>
-  <button [disabled]="!simpleform.valid">submite</button>
-  <button (click)="setva()">setvalue</button>
-  <button (click)="pachva()">pachvalue</button>
-</form>
-<div>
-  <table border="1">
-    <tr>
-      <th>Enter fast name</th>
-      <th>Enter last name</th>
-      <th>Enter address</th>
-      <th>Enter email</th>
-      <th>gender</th>
-    </tr>
-    <tr>
-      <td>{{uaered.fast}}</td>
-      <td>{{uaered.last}}</td>
-      <td>{{uaered.address}}</td>
-      <td>{{uaered.email}}</td>
-      <td>{{uaered.gender}}</td>
-    </tr>
-  </table>
+<div style="position: absolute;     left: 258px;
+top: 21px;">
+  <form [formGroup]="myReactiveForm" (ngSubmit)=onSubmit()>
+    <div formGroupName="userDtail">
+        <label for="">user name</label><br>
+        <input type="text" name="userName" formControlName="userName"><br>
+
+        <label for="">Email</label><br>
+        <input type="email" name="email" formControlName="email"><br>
+        <small *ngIf="!myReactiveForm.get('userDtail.email').valid && myReactiveForm.get('userDtail.email').touched">enter valed email
+          fffffffffffffffffff</small><br><br>
+    </div>
+    <label for="">user course</label><br>
+    <select name="course" id="" formControlName="course">
+
+      <option value="angular">angular</option>
+      <option value="react">react</option>
+      <option value="php">php</option>
+    </select><br><br>
+    <label for="">gender</label><br>
+
+    <div *ngFor="let m of genders">
+      <input type="radio" id="{{m.id}}" formControlName="gende" value="{{m.valu}}">
+      <label for="{{m.id}}">{{m.valu}}</label>
+    </div>
+    <button>submite</button>
+  </form>
 </div>

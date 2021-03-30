@@ -1,5 +1,5 @@
-import {Component, OnInit, ViewChild, } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,64 +7,30 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-@ViewChild('simpleform') myform:NgForm
 
-genders = [
-  {id:"1", gender:'male'},
-  {id:"2", gender:'female'}
-];
-defoultvaluee="female";
-usernamee="gyanendra dubey"
-
-setva(){
-  this.myform.setValue({
-    
-    userditel:{
-      fast:"RAJU",
-      last:"AAAAAAA"
-    },
-    address:"",
-    email:"",
-    gender:""
-
-})
-}
-pachva(){
-  this.myform.form.patchValue({
-    
-    userditel:{
-      fast:"raju",
-      last:"dubey"
-    },
-})
-}
-uaered={
-  fast:'',
-  last:'',
-  address:'',
-  email:'',
-  gender:''
-}
+  genders = [
+    {id:"1", valu:"male"},
+    {id:"2", valu:"female"}
+  ];
+  // defoultvaluee="female";
+  myReactiveForm:FormGroup
 
 
-  valusend(val){
-   this.uaered.fast = val.userditel.fast;
-   this.uaered.last = val.userditel.last;
-   this.uaered.address = val.address;
-   this.uaered.email = val.email;
-   this.uaered.gender = val.gender;
-      console.log(this.uaered.fast);
-      console.log(this.uaered.last);
-      console.log(this.uaered.address);
-      console.log(this.uaered.email);
-      console.log(this.uaered.gender);
-      console.log(val);
-      this.myform.reset();
-  }
   constructor( ) { }
 
   ngOnInit() {
-   
+   this.myReactiveForm = new FormGroup({
+     "userDtail": new FormGroup ({
+       "userName": new FormControl(null, Validators.required),
+       "email": new FormControl(null,  [Validators.required, Validators.email]),
+
+     }),
+     "course": new FormControl("angular", Validators.required),
+     "gende": new FormControl("male",  Validators.required)
+   })
+  }
+  onSubmit(){
+    console.log(this.myReactiveForm.value)
   }
 
 }
