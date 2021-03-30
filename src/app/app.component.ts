@@ -20,6 +20,7 @@ getUserValue(val:any){
   this.age = val.age.age;
   this.address = val.age.address;
   console.log(this.age)
+  console.log(val)
 }
 
 
