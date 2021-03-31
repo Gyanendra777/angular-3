@@ -1,24 +1,5 @@
-<!-- <input type="text" #post>
-<button (click)=send(post)>click</button>
-<button type="reset" type="submit">reset</button> -->
-
-<form #simple="ngForm" (ngSubmit)=sendchild(simple.value)>
-  <input type="text" name="fist" ngModel><br><br>
-  <select  name = "select" ngModel><br><br>
-    <option value="software Engineer">software Engineer</option>
-    <option value="full stack Developer">full stack Developer</option>
-    <option value="Wev Designer">Wev Designer</option>   
-    <option value="tester">tester</option>
-  </select><br><br>
-  <input type="file" value="choose File.." name="" id="" name="file" ngModel><br><br>
-  <div class="form-check" *ngFor="let m of gender" >
-    <input class="form-check-input" type="radio" name="radio" ngModel id="{{m.id}}" value="{{m.value}}">
-    <label class="form-check-label" for="flexRadioDefault1" id="{{m.id}}">
-     {{m.value}}
-    </label>
-  </div><br><br>
-  <button>Save/Update</button>
-  <button type="reset">Reset/cancel</button>
-</form><br><br>
-
-<app-home [childpost]="parentPosts"></app-home>
+<h1>{{title}}</h1>
+<app-child [child]="prant"></app-child>
+<app-child2 (valueChange)='displayCounter($event)'></app-child2>
+<br/><br/>
+<h2>Value increment in Parent: {{parentCount}}</h2>

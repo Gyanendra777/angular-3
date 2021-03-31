@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { InteractionService } from './interaction.service';
+
 
 
 @Component({
@@ -9,20 +8,16 @@ import { InteractionService } from './interaction.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  parentPosts: any[]=[];
-  parentPos
+  title:"hello"
+  
+  parent = 10;
+  parentCount = 0;
 
-  gender=[
-    {id:"1", value:"male"},
-    {id:"2", value:"femaile"}
-  ]
+  prant="prant in user name input mathade"
 
-  sendchild(posts:any){
-    this.parentPos = posts
-      this.parentPosts.push(this.parentPos)
-      console.log(this.parentPosts)
-     
-    
+  displayCounter(count){
+    this.parentCount = count;
+    console.log(this.parentCount)
   }
 
 }
