@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { InteractionService } from './interaction.service';
 
 
 @Component({
@@ -7,22 +9,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  parentPosts: any[]=[];
+  parentPos
 
-  address
-  username
-  age
+  gender=[
+    {id:"1", value:"male"},
+    {id:"2", value:"femaile"}
+  ]
 
-constructor(){}
-
-
-getUserValue(val:any){
-  this.username = val.name.username;
-  this.age = val.age.age;
-  this.address = val.age.address;
-  console.log(this.age)
-  console.log(val)
-}
-
-
+  sendchild(posts:any){
+    this.parentPos = posts
+      this.parentPosts.push(this.parentPos)
+      console.log(this.parentPosts)
+     
+    
+  }
 
 }
