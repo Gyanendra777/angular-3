@@ -1,0 +1,13 @@
+
+article {
+  
+  padding: 20px;
+  width: 100%;
+  background-color: #b5c461;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+  box-shadow: 0 0 20px inset #ca131399;
+}

@@ -1,0 +1,24 @@
+<form #simpleform="ngForm" (ngSubmit)="valusend(simpleform.value)">
+  <div ngModelGroup="userditel" #userditel="ngModelGroup">
+    <label for="">Enter fast name*</label><br>
+    <input type="text" name="fast" [(ngModel)]="usernamee" ngModel required #fast="ngModel"><br>
+    <label *ngIf="!fast.valid && fast.touched">please Enter Enter fast name</label>
+    <br><br>
+    <label for="">Enter last name</label><br>
+    <input type="text" name="last" ngModel required #last="ngModel"><br>
+    <label *ngIf="!last.valid && last.touched">please Enter valid last name</label>
+    <br>
+  </div>
+   <strong *ngIf="!userditel.valid && userditel.touched">userditel in valid input ngModelGroup</strong><br><br><br>
+  <label for="">Enter address </label><br>
+  <input type="text" name="address" ngModel required #address="ngModel"><br>
+  <label *ngIf="!address.valid && address.touched">please Enter valid address</label>
+  <br><br>
+  <label for="">Enter email </label><br>
+  <input type="email" name="email" ngModel email required #email="ngModel"><br>
+  <label *ngIf="!email.valid && email.touched">please Enter valid Email</label>
+  <br><br>
+  <br>
+  <br>
+  <button [disabled]="!simpleform.valid">submite</button>
+</form>
