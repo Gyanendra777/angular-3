@@ -8,15 +8,21 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 })
 export class Child2Component implements OnInit {
 @Output() massiger=new EventEmitter()
-  counter = 0;
-  constructor() { }
+
+count=0;
+
+clearCount(){
+  this.count++;
+  this.massiger.emit(this.count)
+}
+
+nameChanged(arg){
+  console.log("modelchanged" + arg)
+}
+
 
   ngOnInit(): void {
     
   }
-  valueChange(){
-    this.counter += 1;
-    this.massiger.emit(this.counter);
-  }
-
+  
 }

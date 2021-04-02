@@ -1,0 +1,8 @@
+export class Customer {
+ 
+  name:string;
+  address:string;
+  city:string;
+  state:string;
+  country:string;
+}

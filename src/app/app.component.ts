@@ -8,16 +8,35 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:"hello"
+  chuc
   
-  parent = 10;
+  sa="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  cssArrays={
+    'red':true, 'size20':false
+  }
+  cssArray=[
+     'red',
+     'size20'
+  ]
+  
+  valu=""
   parentCount = 0;
 
-  prant="prant in user name input mathade"
-
-  displayCounter(count){
-    this.parentCount = count;
+  displayCounter(ev){
+    this.parentCount = ev.target.value;
+    
     console.log(this.parentCount)
+  }
+  name=""
+  clearName(){
+    this.name=""
+  }
+  constructor(){
+    console.log()
+  }
+  chuckChander(dsder){
+    this.chuc = dsder
+    console.log(this.chuc)
   }
 
 }
