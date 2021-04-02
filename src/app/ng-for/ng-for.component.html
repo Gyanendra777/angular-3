@@ -1,9 +1,0 @@
-title<input type="text" [(ngModel)]="mTitle" name="" id="">
-director<input type="text" [(ngModel)]="mDirector" name="" id="">
-<button (click)="addMovie()">add</button>
-
-<ul>
-  <li *ngFor = "let moves of movese; index as i">
-    {{i}}.{{moves.title}}-{{moves.director}} <button (click)="remove(i)">remove</button>
-  </li>
-</ul>
