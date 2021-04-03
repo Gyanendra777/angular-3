@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 
 @Component({
@@ -7,16 +7,16 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
   styleUrls: ['./outputing.component.css']
 })
 export class OutputingComponent implements OnInit {
-  @Output() childerader=new EventEmitter()
-  sendr: any;
-  outeeee
+  items = ['item1', 'item2', 'item3', 'item4'];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+  }
+  
+ 
   constructor() { }
 
   ngOnInit(): void {
   }
-  sender(outeeee){
-    this.sendr =outeeee
-    this.childerader.emit(this.sendr)
-  }
-
+ 
 }

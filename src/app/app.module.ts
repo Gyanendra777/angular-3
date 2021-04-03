@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { OutputingComponent } from './outputing/outputing.component';
+import { ChildComponent } from './child/child.component';
 
 
 
@@ -17,6 +18,7 @@ import { OutputingComponent } from './outputing/outputing.component';
     AppComponent,
     routingComponents,
     OutputingComponent,
+    ChildComponent,
  
    
    

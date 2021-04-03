@@ -1,3 +1,5 @@
-<p>outputing works!</p>
-<input type="text"[(ngModel)]="outeeee">
-<button (click)="sender(outeeee)">add</button>
+
+<app-child (newItemEvent)="addItem($event)"></app-child>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
